@@ -18,10 +18,23 @@ public class Main {
             scanner.nextLine();
 
             switch (opcao) {
-                case 1: System.out.print("Digite a URL: ");
-                String url = scanner.nextLine();
-                navegador.visitarPagina(url);
-                break;
+                case 1:
+                    System.out.print("Digite a URL: ");
+                    String url = scanner.nextLine();
+                    navegador.visitarPagina(url);
+                    break;
+                case 2:
+                    navegador.voltar();
+                    break;
+                case 3:
+                    navegador.avancar();
+                    break;
+                case 4:
+                    System.out.println("Navegador encerrado");
+                    scanner.close();
+                    return;
+                default: System.out.println("Opcao invalida, tente novamente.");
+            //default usado caso o usuario selecionar alguma opcao fora do indicado.
             }
 
         }
