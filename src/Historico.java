@@ -26,6 +26,14 @@ public class Historico {
             if (pilhaAvancar == null) {
                 pilhaAvancar = new Stack<>();
             }
+            pilhaAvancar.push(paginaAtual);
+            String paginaAnterior = pilhaVoltar.pop();//Remove o item que está no topo da pilha
+
+            if(pilhaVoltar.isEmpty()){
+                pilhaVoltar = null; // elimina pilha vazia
+            }
+            return paginaAnterior;
         }
+        return null;
     }
 }
