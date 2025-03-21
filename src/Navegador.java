@@ -37,4 +37,26 @@ public class Navegador {
         }
         mostrarEstado();// será usado para mostrar como esta o estado do navegador
     }
+
+    //funçãod e exibir o estado do navegador
+
+    private void mostrarEstado() {
+        if (paginaAtual == null) {
+            System.out.println("PÁGINA ATUAL: Nenhuma");
+        } else {
+            System.out.println("PÁGINA ATUAL: " + paginaAtual);
+        }
+
+        if (historico.podeVoltar()) {
+            System.out.println(" <-- BOTAO VOLTAR: Ativado");
+        } else {
+            System.out.println(" <-- BOTAO VOLTAR: Desativado");
+        }
+
+        if (historico.podeAvancar()) {
+            System.out.println(" --> BOTAO AVANÇAR: Ativado");
+        } else {
+            System.out.println(" --> BOTAO AVANÇAR: Desativado");
+        }
+    }
 }
