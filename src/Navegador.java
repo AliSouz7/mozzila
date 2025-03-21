@@ -26,4 +26,15 @@ public class Navegador {
         }
         mostrarEstado();// será usado para mostrar como esta o estado do navegador
     }
+
+    //avancar para a proxima pagina
+    public void avancar(){
+        String paginaSeguinte = historico.avancar(paginaAtual);
+        if(paginaSeguinte != null) {
+            paginaAtual = paginaSeguinte;
+        } else {
+            System.out.println("Não há páginas para avancar.");
+        }
+        mostrarEstado();// será usado para mostrar como esta o estado do navegador
+    }
 }
