@@ -15,4 +15,15 @@ public class Navegador {
         paginaAtual = url;
         mostrarEstado(); // será usado para mostrar como esta o estado do navegador
     }
+
+    //voltar para a pagina anterior
+    public void voltar() {
+        String paginaAnterior = historico.voltar(paginaAtual);
+        if(paginaAnterior != null) {
+            paginaAtual = paginaAnterior;
+        } else {
+            System.out.println("Não há páginas para voltar.");
+        }
+        mostrarEstado();// será usado para mostrar como esta o estado do navegador
+    }
 }
