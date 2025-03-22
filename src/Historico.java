@@ -36,4 +36,23 @@ public class Historico {
         }
         return null;
     }
+
+    //Avançar proxima pagina
+    public String avancar(String paginaAtual) {
+        if (pilhaAvancar != null && !pilhaAvancar.isEmpty()) {
+            if (pilhaVoltar == null) {
+                pilhaVoltar = new Stack<>();
+            }
+            pilhaVoltar.push(paginaAtual);
+            String paginaSeguinte = pilhaAvancar.pop();//Remove item que está no topo da pilha
+
+            if (pilhaAvancar.isEmpty()) {
+                pilhaAvancar = null; //elimina pilha vazia
+            }
+            return paginaSeguinte;
+        }
+        return null;
+    }
+
+    //metodo de consulta
 }
