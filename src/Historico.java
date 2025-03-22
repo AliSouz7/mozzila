@@ -55,4 +55,11 @@ public class Historico {
     }
 
     //metodo de consulta
+    public boolean podeVoltar() {
+        return pilhaVoltar != null && !pilhaVoltar.isEmpty();
+    }
+
+    public boolean podeAvancar() {
+        return pilhaAvancar != null && !pilhaAvancar.isEmpty();
+    }
 }
