@@ -10,7 +10,7 @@ public class Main {
             System.out.println("MENU - NAVEGADOR");
             System.out.println("1 - Nova pagina");
             System.out.println("2 - Voltar");
-            System.out.println("3 - Avncar");
+            System.out.println("3 - Avancar");
             System.out.println("4 - Sair");
             System.out.print(" ESCOLHA UMA OPCAO: ");
 
