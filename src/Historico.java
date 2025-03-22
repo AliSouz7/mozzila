@@ -30,12 +30,8 @@ public class Historico {
             String paginaAtual = pilhaVoltar.pop();
             pilhaAvancar.push(paginaAtual);
 
-            // Retornamos a nova página atual (topo da pilha de voltar, se existir)
-            if (pilhaVoltar.isEmpty()) {
-                return null;
-            } else {
-                return pilhaVoltar.peek(); //metodo peek retorna o elemento no topo da pilha sem removê-lo
-            }
+            // Se ainda houver páginas na pilha de voltar, retorna a nova página atual
+            return pilhaVoltar.isEmpty() ? paginaAtual : pilhaVoltar.peek();
 
         }
         return null;
@@ -50,14 +46,11 @@ public class Historico {
                 pilhaVoltar = new Stack<>();
             }
             pilhaVoltar.push(paginaAtual);
-            String paginaSeguinte = pilhaAvancar.pop();//Remove item que está no topo da pilha
-
-            if (pilhaAvancar.isEmpty()) {
-                pilhaAvancar = null; //elimina pilha vazia
-            }
+            // Recupera a página seguinte e atualiza a pilha corretamente
+            String paginaSeguinte = pilhaAvancar.pop();
             return paginaSeguinte;
         }
-        return null;
+        return paginaAtual; // Mantém a página atual caso não haja página para avançar
     }
 
     //metodo de consulta
