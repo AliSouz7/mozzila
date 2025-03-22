@@ -42,7 +42,7 @@ public class Historico {
     }
 
 
-     //invertido o pop com o push e adicionado um ifelse com peek
+
     //Avançar proxima pagina
     public String avancar(String paginaAtual) {
         if (pilhaAvancar != null && !pilhaAvancar.isEmpty()) {

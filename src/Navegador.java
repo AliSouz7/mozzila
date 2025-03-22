@@ -18,7 +18,7 @@ public class Navegador {
 
     //voltar para a pagina anterior
     public void voltar() {
-        String paginaAnterior = historico.voltar();//retirado paginaAtual no ajuste
+        String paginaAnterior = historico.voltar();
         if(paginaAnterior != null) {
             paginaAtual = paginaAnterior;
         } else {
